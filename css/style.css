@@ -1,0 +1,72 @@
+:root {
+    /* BRAND COLORS */
+    --brand-green: #009640;
+    --brand-yellow: #faa42f;
+    --brand-blue: #0d599c;
+}
+/* Button */
+.custom-button-1 {
+    background-color: var(--brand-blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.custom-button-1:hover {
+    background-color: #0a3a5e; /* Dark variant of brand blue */
+    color: white;
+}
+
+.custom-button-1:active {
+    background-color: #072b4b; /* Darker variant of brand blue */
+    color: white;
+}
+
+
+/* Outline Button */
+.custom-button-2 {
+    background-color: transparent;
+    color: var(--brand-yellow);
+    padding: 10px 20px;
+    border: 1px solid var(--brand-yellow);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-button-2:hover {
+    background-color: var(--brand-yellow);
+    color: white;
+}
+
+.custom-button-2:active {
+    background-color: #fa8f00; /* Darker variant of brand yellow */
+    color: white;
+}
+.display-1 {
+    color: var(--brand-yellow);
+}
+/* Carousel base class */
+    
+ .carousel {
+    margin-bottom: 0rem;
+}
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+
+.carousel-item {
+    height: 37rem;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
