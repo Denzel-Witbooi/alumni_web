@@ -4,6 +4,49 @@
     --brand-yellow: #faa42f;
     --brand-blue: #0d599c;
 }
+
+
+
+/* Document and media releases */
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+/* END */
+
+/* BANNER */
+.banner {
+    margin-bottom: 0rem;
+}
+
+.banner-item {
+    height: 20rem;
+}
+
+.banner-caption {
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-h1 {
+    color: white !important;
+}
+
 /* Button */
 .custom-button-1 {
     background-color: var(--brand-blue);
@@ -13,13 +56,16 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .custom-button-1:hover {
-    background-color: #0a3a5e; /* Dark variant of brand blue */
+    background-color: #0a3a5e;
+    /* Dark variant of brand blue */
     color: white;
 }
 
 .custom-button-1:active {
-    background-color: #072b4b; /* Darker variant of brand blue */
+    background-color: #072b4b;
+    /* Darker variant of brand blue */
     color: white;
 }
 
@@ -40,27 +86,32 @@
 }
 
 .custom-button-2:active {
-    background-color: #fa8f00; /* Darker variant of brand yellow */
+    background-color: #fa8f00;
+    /* Darker variant of brand yellow */
     color: white;
 }
+
 .display-1 {
     color: var(--brand-yellow);
 }
+
 /* Carousel base class */
-    
- .carousel {
+
+.carousel {
     margin-bottom: 0rem;
 }
+
 /* Since positioning the image, we need to help out the caption */
 
 .carousel-caption {
     bottom: 3rem;
     z-index: 10;
 }
+
 /* Declare heights because of positioning of img element */
 
 .carousel-item {
-    height: 37rem;
+    height: 36rem;
 }
 
 .carousel-control-next-icon {
