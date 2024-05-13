@@ -13,8 +13,10 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/directory.css">
     </head>
     <body>
         <section>
@@ -110,16 +112,13 @@
                                         <input type="text" id="searchInput" placeholder="Search people" class="form-control">
                                     </div>
                                     <div class="col-md-3">
-                                        <!-- Filter Dropdown -->
-                                        <div class="btn-group" style="display:block">
-                                            <a href="register.html" class="btn btn-outline-green" role="button">Register your profile</a>
-                                        </div>
+                                        <!-- Filter Dropdown -->                                  
                                     </div>
                                 </div>
                             </div>
         
                             <!-- Alumni List -->
-                            <div class="list-group contact-group" id="alumniList">
+                            <div class="list-group contact-group py-4" id="alumniList">
                                 <!-- Your existing alumni list items go here -->
                             </div>
         
@@ -404,4 +403,5 @@
     </body>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/alumni.js"></script>
 </html>
