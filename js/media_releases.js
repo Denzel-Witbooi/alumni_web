@@ -25,13 +25,11 @@ function generateDocumentCards(documentList) {
     let html = '';
     documentList.forEach(document => {
         html += `
-<div class="col-md-4">
- <div class="document-card">
-     <h4>${document.title}</h4>
-     <p>${document.description}</p>
-     <a href="${document.link}" target="_blank" class="btn btn-primary">Click here</a>
- </div>
-</div>
+        <div class="col-lg-3 col-md-4 col-sm-6 my-1">
+        <a class="card h-100 mx-1" href="${document.link}" target="_blank">
+            <div class="card-body text-center">${document.title}</div>
+        </a>
+    </div>
 `;
     });
     return html;

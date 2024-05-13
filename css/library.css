@@ -1,0 +1,32 @@
+/* library */
+a.card {
+    color: white;
+    text-decoration: inherit;
+    background-color: #8d8d8d;
+}
+.card:hover {
+    background-color: #0d599c; /* Example hover background color */
+    /* Add any other styles for the hover effect */
+}
+
+.no-gutters{ 
+    margin-right: 0;
+    margin-left: 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+}

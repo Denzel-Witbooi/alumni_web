@@ -6,6 +6,28 @@
 }
 
 
+/* contact */
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+.bg-yellow {
+    background-color: #faa42f;
+}
+
+.bg-blue {
+    background-color: #0d599c;
+}
+
+.bg-green {
+    background-color: #057426;
+}
+
 
 /* Document and media releases */
 .card-body {
@@ -13,7 +35,8 @@
     min-height: 1px;
     padding: 1.25rem;
 }
-.card{
+
+.card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -21,9 +44,10 @@
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
 }
+
 /* END */
 
 /* BANNER */
@@ -66,6 +90,30 @@
 .custom-button-1:active {
     background-color: #072b4b;
     /* Darker variant of brand blue */
+    color: white;
+}
+
+.custom-outline-button {
+    background-color: transparent;
+    /* Transparent background */
+    color: var(--brand-blue);
+    /* Text color same as brand blue */
+    padding: 10px 20px;
+    border: 1px solid var(--brand-blue);
+    /* Add border */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-outline-button:hover {
+    background-color: var(--brand-blue);
+    /* Brand blue on hover */
+    color: white;
+}
+
+.custom-outline-button:active {
+    background-color: #072b4b;
+    /* Darker variant of brand blue on active */
     color: white;
 }
 
