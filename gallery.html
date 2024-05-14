@@ -13,6 +13,10 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script
+            src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -82,8 +86,8 @@
             </nav>
         </section>
         <main>
-               <!-- BANNER start -->
-               <section>
+            <!-- BANNER start -->
+            <section>
                 <section class="banner">
                     <div class="carousel-inner">
                         <div class="banner-item active c-item">
@@ -100,7 +104,77 @@
                 </section>
             </section>
             <!-- BANNER end -->
-            
+
+            <section>
+                <div class="container py-5">
+                    <div class="row">
+                        <!-- <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h1 class="gallery-title">Gallery</h1>
+                    </div> -->
+
+                        <div class="align-content-center">
+                            <button class="btn btn-default filter-button"
+                                data-filter="all">All</button>
+                            <button class="btn btn-default filter-button"
+                                data-filter="alumni">Alumni</button>
+                            <button class="btn btn-default filter-button"
+                                data-filter="lectures">Lectures</button>
+                            <button class="btn btn-default filter-button"
+                                data-filter="graduation">Graduation</button>
+                            <!-- <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button> -->
+                        </div>
+                        <br />
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter graduation">
+                            <img src="assets/images/Image 2.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter alumni">
+                            <img src="assets/images/Image 8.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter lectures">
+                            <img src="assets/images/Image 11.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter alumni">
+                            <img src="assets/images/Image 6.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter graduation">
+                            <img src="assets/images/Image 3.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter alumni">
+                            <img src="assets/images/Image 10.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter graduation">
+                            <img src="assets/images/Image 4.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter graduation">
+                            <img src="assets/images/Image 5.png"
+                                class="img-fluid">
+                        </div>
+                        <div
+                            class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter alumni">
+                            <img src="assets/images/Image 7.png"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- END -->
+
             <!-- footer -->
             <footer class="text-center text-lg-start bg-body-tertiary">
                 <!-- Section: Social media -->
@@ -139,7 +213,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <button type="submit"
-                                        class="btn btn-outline-primary w-100"
+                                        class="btn btn-outline-primary w-100 custom-outline-button"
                                         data-toggle="modal"
                                         data-target="#successModal">Subscribe</button>
                                 </div>
@@ -347,4 +421,5 @@
     </body>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/gallery.js"></script>
 </html>

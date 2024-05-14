@@ -143,6 +143,40 @@
     color: var(--brand-yellow);
 }
 
+/* gallery */
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid var(--brand-green);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--brand-green);
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid var(--brand-green);
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--brand-green);
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: var(--brand-green);
+    color: white;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+/* end */
+
 /* Carousel base class */
 
 .carousel {
@@ -159,7 +193,7 @@
 /* Declare heights because of positioning of img element */
 
 .carousel-item {
-    height: 36rem;
+    height: 37.5rem;
 }
 
 .carousel-control-next-icon {
