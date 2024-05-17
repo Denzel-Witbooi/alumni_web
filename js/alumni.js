@@ -26,41 +26,27 @@ function generateAlumniList(alumniList) {
         const avatarNumber = getRandomNumber(1, 800);
 
         html += `
-        <div class="col-lg-4">
-        <div class="card m-b-30">
-            <div class="card-body">
-                <div class="media">
-                    <div class="pull-left">
-                        <img class="d-flex mr-3 rounded-circle img-thumbnail thumb-lg" src="https://eu.ui-avatars.com/api/?name=${alumniList[i].name}&size=200" alt="...">
-                    </div>
-                    <div class="media-body">
-                        <h5 class="mt-0 font-18 mb-1">${alumniList[i].name}</h5>
-                        <p class="text-muted font-14">${alumniList[i].position}</p>
-                        <ul class="social-links list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="1234567890"><i class="fa fa-whatsapp"></i></a>
-                            </li>
-                        </ul>
-                        <div class="media-content">
-                            <i class="fa fa-map-marker"></i> ${alumniList[i].place}
-                            <ul class="list-unstyled">
-                                <li><strong>Gender:</strong> ${alumniList[i].gender}</li>
-                                <li><strong>Started:</strong> ${alumniList[i].startDate}</li>
-                                <li><strong>End:</strong> ${alumniList[i].endDate}</li>
-                            </ul>
-                            <a href="#"><p>View details</p></a>
+        <div class="col-md-4">
+                    <div class="list-group-item">
+                        <div class="media">
+                            <div class="pull-left">
+                                <img class="img-circle" src="https://eu.ui-avatars.com/api/?name=${alumniList[i].name}&size=200" alt="...">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">${alumniList[i].name} <small class="title-white">${alumniList[i].position}</small></h4>
+                                <div class="media-content">
+                                    <i class="fa fa-map-marker"></i> ${alumniList[i].place}
+                                    <ul class="list-unstyled">
+                                        <li><strong>Gender:</strong> ${alumniList[i].gender}</li>
+                                        <li><strong>Started:</strong> ${alumniList[i].startDate}</li>
+                                        <li><strong>End:</strong> ${alumniList[i].endDate}</li>
+                                    </ul>
+                                    <a href="#"><p>View details</p></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
     
 `;
 
