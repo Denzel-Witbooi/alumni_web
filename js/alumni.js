@@ -8,8 +8,8 @@ function getRandomNumber(min, max) {
 const alumniData = [
     { name: 'John Doe', position: 'Manager', place: 'Eastern Cape, Port Elizabeth', gender: 'Male', startDate: '12 Nov 2014', endDate: '31-May-2016', email: 'john.doe@example.com', phone: '+123456789', location: 'Eastern Cape, South Africa', description: 'I joined CDC as a procurement intern. After 5 months in procurement, I moved to the CEO’s Office in which I stayed for the rest of my internship. CDC has groomed me into the professional I am today. I have learned everything starting from integrity at work.' },
     { name: 'Jane Smith', position: 'Engineer', place: 'Western Cape, Cape Town', gender: 'Female', startDate: '15 Jan 2015', endDate: '30-Apr-2017', email: 'jane.smith@example.com', phone: '+987654321', location: 'Western Cape, South Africa', description: 'I started my journey at CDC as a software developer. Over the years, I have contributed to various projects and gained valuable experience. CDC has provided me with opportunities to grow and excel in my career.' },
-    { name: 'Jane Smith', position: 'Developer', place: 'Western Cape, Cape Town', gender: 'Female', startDate: '15 Jan 2015', endDate: '30-Apr-2017', email: 'jane.smith@example.com', phone: '+987654321', location: 'Western Cape, South Africa', description: 'I started my journey at CDC as a software developer. Over the years, I have contributed to various projects and gained valuable experience. CDC has provided me with opportunities to grow and excel in my career.' },
-
+    { name: 'Jane Smith', position: 'Engineer', place: 'Western Cape, Cape Town', gender: 'Female', startDate: '15 Jan 2015', endDate: '30-Apr-2017', email: 'jane.smith@example.com', phone: '+987654321', location: 'Western Cape, South Africa', description: 'I started my journey at CDC as a software developer. Over the years, I have contributed to various projects and gained valuable experience. CDC has provided me with opportunities to grow and excel in my career.' },
+    
 
 ];
 const itemsPerPage = 6; // Number of alumni items to show per page
