@@ -4,6 +4,17 @@
     --brand-yellow: #faa42f;
     --brand-blue: #0d599c;
 }
+
+/* FOOTER ICON */
+.footer-icon{
+    color: black;
+}
+
+.footer-icon:hover {
+    color: var(--brand-blue);
+}
+
+
 /* Gallery v2 */
 .gallery-menu{
 	text-align:center;
@@ -173,6 +184,27 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.custom-button-3 {
+    background-color: var(--brand-yellow);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-button-3:hover {
+    background-color: #fa8f00;
+    /* Dark variant of brand blue */
+    color: white;
+}
+
+.custom-button-3:active {
+    background-color: #fa8f00;
+    /* Darker variant of brand blue */
+    color: white;
 }
 
 .custom-button-1:hover {
