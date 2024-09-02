@@ -307,6 +307,7 @@
 
 .carousel {
     margin-bottom: 0rem;
+    interval: 5000;
 }
 
 /* Since positioning the image, we need to help out the caption */
