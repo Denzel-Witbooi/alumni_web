@@ -28,7 +28,7 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      border: 1px solid #eeeeee;
+      border: 1px solid #a8a7a7a2;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
@@ -112,7 +112,7 @@
         text-align: center;
         padding: 20px 20px 0px 20px;
         border-top: none;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid #a8a7a7a2;
     }
     .candidate-grid .candidate-list-details ul {
         -webkit-box-pack: center;
@@ -382,6 +382,27 @@
     .widget .widget-content {
         margin-top: 10px;
     }
+
+    .widget {
+    width: 100%; /* Let the widget take up available space */
+}
+
+.custom-control {
+    display: flex;
+    align-items: center; /* Vertically center checkbox and label */
+    margin-bottom: 10px; /* Optional: Space between checkboxes */
+}
+
+.custom-control-input {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+.custom-control-label {
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if necessary */
+    max-width: 100%; /* Ensure the label stays within the sidebar */
+}
+
         </style>
     </head>
     <body>
@@ -496,47 +517,123 @@
                             </div>
                             <div class="widget">
                                 <div class="widget-title widget-collapse">
-                                    <h6 class="me-2">Specialism</h6>
-                                    <a class="ml-auto" data-toggle="collapse"
-                                        href="#specialism" role="button"
+                                    <h6 class="me-2">Business Unit</h6>
+                                    <a class="ml-lg-auto" data-toggle="collapse"
+                                        href="#bu" role="button"
                                         aria-expanded="false"
-                                        aria-controls="specialism"> <i
+                                        aria-controls="bu"> <i
                                             class="fas fa-chevron-down"></i> </a>
                                 </div>
-                                <div class="collapse show" id="specialism">
+                                <div class="collapse show" id="bu">
                                     <div class="widget-content">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox"
                                                 class="custom-control-input"
-                                                id="specialism1">
+                                                id="bu1">
                                             <label class="custom-control-label"
-                                                for="specialism1">IT
-                                                Contractor</label>
+                                                for="bu1">Business Development (BD)</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox"
                                                 class="custom-control-input"
-                                                id="specialism2">
+                                                id="bu2">
                                             <label class="custom-control-label"
-                                                for="specialism2">Clinical
-                                                Psychology</label>
+                                                for="bu2">Business Development (BD) External Services</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox"
                                                 class="custom-control-input"
-                                                id="specialism3">
+                                                id="bu3">
                                             <label class="custom-control-label"
-                                                for="specialism3">Digital &amp;
-                                                Creative</label>
+                                                for="bu3">CEO's Office</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox"
                                                 class="custom-control-input"
-                                                id="specialism4">
+                                                id="bu4">
                                             <label class="custom-control-label"
-                                                for="specialism4">Estate
-                                                Agency</label>
+                                                for="bu4">Coega Africa Programme (CAP)</label>
                                         </div>
+                                        
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu5">
+                                            <label class="custom-control-label"
+                                                for="bu5"> Corporate Services (CS) </label>
+                                        </div>
+                                        
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu6">
+                                            <label class="custom-control-label"
+                                                for="bu6"> Finance </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu7">
+                                            <label class="custom-control-label"
+                                                for="bu7"> ICT, Research and Strategy (IRS) </label>
+                                        </div>
+                                        
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu8">
+                                            <label class="custom-control-label"
+                                                for="bu8"> Infrastructure Planning and Development (IPD) </label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu8">
+                                            <label class="custom-control-label"
+                                                for="bu8"> NDPW Unit </label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu8">
+                                            <label class="custom-control-label"
+                                                for="bu8"> Operations </label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu8">
+                                            <label class="custom-control-label"
+                                                for="bu8"> Small Business Finance Unit (SBFU) </label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu8">
+                                            <label class="custom-control-label"
+                                                for="bu8"> Sustainability </label>
+                                        </div>
+                                        
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu8">
+                                            <label class="custom-control-label"
+                                                for="bu8"> TASEZ </label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox"
+                                                class="custom-control-input"
+                                                id="bu8">
+                                            <label class="custom-control-label"
+                                                for="bu8"> TASEZ </label>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -570,8 +667,7 @@
                                             <div class="candidate-list-option">
                                                 <ul class="list-unstyled">
                                                     <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Recruitment
-                                                        Consultancy</li>
+                                                            class="fas fa-filter pr-1 me-1"></i>Human Capital Solutions (HCS)</li>
                                                     <li><i
                                                             class="fas fa-map-marker-alt pr-1 me-1"></i>Haines
                                                         City, FL 33844</li>
