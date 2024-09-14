@@ -15,7 +15,7 @@ const alumniData = [
     { name: 'Jane Smith', position: 'Engineer', place: 'Western Cape, Cape Town', gender: 'Female', startDate: '15 Jan 2015', endDate: '30-Apr-2017', email: 'jane.smith@example.com', phone: '+987654321', location: 'Western Cape, South Africa', description: 'I started my journey at CDC as a software developer. Over the years, I have contributed to various projects and gained valuable experience. CDC has provided me with opportunities to grow and excel in my career.', bu: ' ICT, Research and Strategy (IRS)' },
 
 ];
-const itemsPerPage = 6; // Number of alumni items to show per page
+const itemsPerPage = 12; // Number of alumni items to show per page
 let currentPage = 1;
 
 // Function to generate HTML for alumni list
@@ -126,16 +126,37 @@ function filterLocation() {
     renderPagination(filteredLocation);
 }
 
-// Function to render pagination controls
+// Function to render pagination controls with Prev and Next buttons
 function renderPagination(alumniList) {
-    const paginationList = document.getElementById('paginationList');
-    paginationList.innerHTML = '';
+    const paginationList = document.querySelector('.pagination');
+    paginationList.innerHTML = ''; // Clear previous pagination
 
     const totalPages = Math.ceil(alumniList.length / itemsPerPage);
 
+    // Prev Button
+    const prevLi = document.createElement('li');
+    prevLi.classList.add('page-item');
+    if (currentPage === 1) {
+        prevLi.classList.add('disabled');
+    }
+    const prevLink = document.createElement('span');
+    prevLink.classList.add('page-link');
+    prevLink.textContent = 'Prev';
+    prevLi.appendChild(prevLink);
+    prevLi.addEventListener('click', () => {
+        if (currentPage > 1) {
+            changePage(currentPage - 1, alumniList);
+        }
+    });
+    paginationList.appendChild(prevLi);
+
+    // Page Numbers
     for (let i = 1; i <= totalPages; i++) {
         const li = document.createElement('li');
         li.classList.add('page-item');
+        if (i === currentPage) {
+            li.classList.add('active');
+        }
         const a = document.createElement('a');
         a.classList.add('page-link');
         a.href = '#';
@@ -144,12 +165,30 @@ function renderPagination(alumniList) {
         li.appendChild(a);
         paginationList.appendChild(li);
     }
+
+    // Next Button
+    const nextLi = document.createElement('li');
+    nextLi.classList.add('page-item');
+    if (currentPage === totalPages) {
+        nextLi.classList.add('disabled');
+    }
+    const nextLink = document.createElement('a');
+    nextLink.classList.add('page-link');
+    nextLink.textContent = 'Next';
+    nextLi.appendChild(nextLink);
+    nextLi.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            changePage(currentPage + 1, alumniList);
+        }
+    });
+    paginationList.appendChild(nextLi);
 }
 
 // Function to change the current page
 function changePage(page, alumniList) {
     currentPage = page;
     renderAlumniList(getCurrentPageItems(alumniList));
+    renderPagination(alumniList); // Update pagination controls after changing page
 }
 
 // Function to get items for the current page
@@ -159,9 +198,10 @@ function getCurrentPageItems(alumniList) {
     return alumniList.slice(startIndex, endIndex);
 }
 
+
 // Function to initialize the page
 function initPage() {
-    renderAlumniList(alumniData);
+    renderAlumniList(getCurrentPageItems(alumniData));
     renderPagination(alumniData);
 
     // Add event listener for search input
