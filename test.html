@@ -264,7 +264,6 @@
     .widget .company-detail-meta .share-box li {
         margin-right: 0;
         display: inline-block;
-        float: left;
     }
     
     .widget .company-detail-meta ul li.linkedin a {
@@ -500,7 +499,7 @@
 
             <!-- CONTENT -->
             <div class="container mt-lg-5 mb-lg-4">
-                <div class="row">
+                <div class="row sidebar">
                     <div class="col-lg-3">
                         <div class="sidebar">
                             <div class="widget border-0">
@@ -511,7 +510,7 @@
                             </div>
                             <div class="widget border-0">
                                 <div class="locations">
-                                    <input class="form-control" type="text"
+                                    <input class="form-control" type="text" id="searchLocation"
                                         placeholder="All Locations">
                                 </div>
                             </div>
@@ -647,310 +646,46 @@
                     </div>
                     <!-- USER LIST -->
                     <div class="col-lg-9">
-                        <!-- <div class="job-filter mb-4 d-sm-flex align-items-center">
-     
-                        </div> -->
-                        <div class="row">
-                            <div class="col-sm-6 col-lg-4 mb-4" data-toggle="modal" data-target="#alumniModal">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>Rafael
-                                                        Briggs</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Human Capital Solutions (HCS)</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Haines
-                                                        City, FL 33844</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5> Roderick
-                                                        Moss</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Information
-                                                        Technology</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Lynch
-                                                        Lane, Weymouth</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>Ronald
-                                                        Bradley</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Human
-                                                        Resources</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Monroe
-                                                        Township, NJ 08831</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>Nichole
-                                                        Haynes</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>IT
-                                                        Contractor</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Botchergate,
-                                                        Carlisle</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>Vickie
-                                                        Meyer</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Human
-                                                        Resources</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Minneapolis,
-                                                        MN 55406</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>Brooke
-                                                        Kelly</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Information
-                                                        Technology</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Rolling
-                                                        Meadows, IL 60008</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>Reyna
-                                                        Chung</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Transport
-                                                        &amp; Logistics</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Glen
-                                                        Cove, NY 11542</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>>Rafael
-                                                        Briggs</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Architecture</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Botchergate,
-                                                        Carlisle</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4 mb-md-0">
-                                <div class="candidate-list candidate-grid">
-                                    <div class="candidate-list-image">
-                                        <img class="img-fluid"
-                                            src="./assets/images/placeholder-image.jpg"
-                                            alt>
-                                    </div>
-                                    <div class="candidate-list-details pb-3">
-                                        <div class="candidate-list-info">
-                                            <div class="candidate-list-title">
-                                                <h5>Michael Bean</h5>
-                                            </div>
-                                            <div class="candidate-list-option">
-                                                <ul class="list-unstyled">
-                                                    <li><i
-                                                            class="fas fa-filter pr-1 me-1"></i>Estate
-                                                        Agency</li>
-                                                    <li><i
-                                                            class="fas fa-map-marker-alt pr-1 me-1"></i>Richmond
-                                                        Hill, NY 11418</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                                <!-- PROFILE VIEW -->
-                                <div class="modal fade" id="alumniModal" tabindex="-1"
-                                    role="dialog" aria-labelledby="alumniModalLabel"
-                                    aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title"
-                                                id="alumniModalLabel">Alumni
-                                                Details</h5>
-                                            <button type="button" class="btn-close"
-                                                data-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body" id="alumniModalBody">
-                                            <!-- Alumni details will be displayed here -->
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button"
-                                                class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                                <a href="login.html" class="btn btn-outline-primary" role="button">Edit my Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                        <!-- ALUMNI LIST -->
+                        <div class="alumni-list" id="alumniList">
                         </div>
+                        <!-- PAGINATION -->
                         <div class="row">
                             <div class="col-12 text-center mt-4 mt-sm-5">
-                                <ul class="pagination justify-content-center mb-0">
-                                    <li class="page-item disabled"> <span
-                                            class="page-link">Prev</span> </li>
-                                    <li class="page-item active"
-                                        aria-current="page"><span
-                                            class="page-link">1 </span> <span
-                                            class="sr-only">(current)</span></li>
-                                    <li class="page-item"><a class="page-link"
-                                            href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link"
-                                            href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link"
-                                            href="#">...</a></li>
-                                    <li class="page-item"><a class="page-link"
-                                            href="#">25</a></li>
-                                    <li class="page-item"> <a class="page-link"
-                                            href="#">Next</a> </li>
+                                <ul class="pagination justify-content-center mb-0" id="paginationList">
+                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                            <!-- PROFILE VIEW -->
+                            <div class="modal fade" id="alumniModal" tabindex="-1"
+                            role="dialog" aria-labelledby="alumniModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="alumniModalLabel">Alumni
+                                            Details</h5>
+                                        <button type="button" class="btn-close"
+                                            data-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" id="alumniModalBody">
+                                        <!-- Alumni details will be displayed here -->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                            <a href="login.html" class="btn btn-outline-primary" role="button">Edit my Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
             </div>
              <!-- CONTENT END -->
 
@@ -1216,6 +951,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/alumni.js"></script>
+    <script src="js/alumni2.js"></script>
     <script type="text/javascript"></script>
 </html>
