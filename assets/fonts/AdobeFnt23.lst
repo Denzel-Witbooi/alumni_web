@@ -1,0 +1,111 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+FullName:Minion Pro
+MenuName:Minion Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\AnamB\OneDrive - coega.co.za\September\Tenders\CDC-321-23 Advert Folder\Document fonts\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:1689243573
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:VitesseSans-Bold
+FamilyName:Vitesse Sans
+StyleName:Bold
+FullName:Vitesse Sans Bold
+MenuName:Vitesse Sans Bold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\AnamB\OneDrive - coega.co.za\September\Tenders\CDC-321-23 Advert Folder\Document fonts\VitesseSans-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:110300
+FileModTime:1689595183
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Vitesse Sans Bold
+NameArray:0,Win,1,Vitesse Sans Bold
+NameArray:0,Win,16,Vitesse Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:VitesseSans-Book
+FamilyName:Vitesse Sans
+StyleName:Book
+FullName:Vitesse Sans Book
+MenuName:Vitesse Sans Book
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\AnamB\OneDrive - coega.co.za\September\Tenders\CDC-321-23 Advert Folder\Document fonts\VitesseSans-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:104656
+FileModTime:1689595190
+WeightClass:325
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Vitesse Sans Book
+NameArray:0,Win,1,Vitesse Sans Book
+NameArray:0,Win,16,Vitesse Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:VitesseSans-Medium
+FamilyName:Vitesse Sans
+StyleName:Medium
+FullName:Vitesse Sans Medium
+MenuName:Vitesse Sans Medium
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\AnamB\OneDrive - coega.co.za\September\Tenders\CDC-321-23 Advert Folder\Document fonts\VitesseSans-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:104636
+FileModTime:1689595185
+WeightClass:350
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Vitesse Sans Medium
+NameArray:0,Win,1,Vitesse Sans Medium
+NameArray:0,Win,16,Vitesse Sans
+%EndFont
+
