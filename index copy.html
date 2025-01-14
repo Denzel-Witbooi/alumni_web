@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coega Development Foundation | COEGA</title>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            .navbar {
+              transition: all 0.3s ease;
+              padding: 1rem 0;
+            }
+            
+            .navbar-nav .nav-link {
+              position: relative;
+              padding: 0.5rem 0;
+            }
+            
+            .navbar-nav .nav-link::after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              background-color: var(--bs-primary);
+              transition: width 0.3s ease;
+            }
+            
+            .navbar-nav .nav-link:hover::after,
+            .navbar-nav .nav-link.active::after {
+              width: 100%;
+            }
+            
+            .dropdown-menu {
+              border-radius: 0.5rem;
+              margin-top: 0.5rem;
+            }
+            
+            .dropdown-item:hover {
+              background-color: var(--bs-light);
+            }
+            
+            @media (max-width: 991.98px) {
+              .navbar-collapse {
+                padding: 1rem 0;
+              }
+              
+              .d-flex.gap-2 {
+                margin-top: 1rem;
+                justify-content: center;
+              }
+            }
+
+            /* HERO */
+            .hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#heroCarousel,
+.carousel-inner,
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.caption-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Custom Green Button Styling */
+.btn-custom-green {
+  background-color: #00A651;
+  border: none;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-custom-green:hover {
+  background-color: #008c44;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 166, 81, 0.3);
+}
+
+.btn-custom-green:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 166, 81, 0.3);
+}
+
+/* Text Styling */
+.carousel-caption h1,
+.carousel-caption h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel Controls */
+.carousel-indicators {
+  margin-bottom: 2rem;
+  z-index: 3;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-2 {
+    font-size: calc(1.8rem + 3vw);
+  }
+
+  .fs-4 {
+    font-size: 1.1rem !important;
+  }
+
+  .btn-custom-green {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .carousel-caption {
+    padding: 0 2rem;
+  }
+}
+
+/* Adjust for very tall screens */
+@media (min-height: 1000px) {
+  .caption-content {
+    max-width: 1000px;
+  }
+}
+
+/* About */
+.about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Feature Cards */
+.feature-card {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Custom Button Styling */
+.btn-cta-primary {
+    background-color: #00A651;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    border: 2px solid #00A651;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-primary:hover {
+    background-color: #008c44;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 166, 81, 0.3);
+}
+
+.btn-cta-secondary {
+    background-color: transparent;
+    color: #00A651;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    border: 2px solid #00A651;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-secondary:hover {
+    background-color: #00A651;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 166, 81, 0.2);
+}
+
+/* Image Styling */
+.about-image-wrapper {
+    position: relative;
+    padding: 1rem;
+}
+
+.about-image-wrapper img {
+    transition: transform 0.3s ease;
+}
+
+.about-image-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .feature-card {
+        padding: 1rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+/* PROGRAMS */
+.programs-section {
+    background-color: #f8f9fa;
+}
+
+.program-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.program-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.program-content {
+    flex-grow: 1;
+}
+
+.program-card h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.card-arrow {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    background-color: #00A651;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.card-arrow i {
+    color: white;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #00A651;
+}
+
+.program-card:hover .card-arrow {
+    background-color: #008c44;
+}
+
+.program-card:hover .card-arrow i {
+    transform: translateX(2px);
+}
+
+/* Section Title Styling */
+.programs-section h2 {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.programs-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #00A651;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .program-card {
+        padding: 1.5rem;
+    }
+    
+    .card-arrow {
+        width: 35px;
+        height: 35px;
+        bottom: 2rem;
+        right: 1rem;
+    }
+    
+    .card-arrow i {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .program-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .program-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* CTA */
+.cta-section {
+        background-color: #001f4d; /* Solid dark blue */
+        padding: 150px 20px;
+    }
+    .text-white {
+        color: #fff;
+    }
+    .btn-yellow {
+        background-color: #ffc107; /* Custom yellow */
+        color: #001f4d;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+    .btn-yellow:hover {
+        background-color: #e0a800;
+        color: #fff;
+    }
+    .btn-yellow-outline {
+        background-color: transparent;
+        color: #ffc107;
+        border: 2px solid #ffc107;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 4px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn-yellow-outline:hover {
+        background-color: #ffc107;
+        color: #001f4d;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+            </style>
+    </head>
+    <body>
+        <!-- navbar -->
+        <section class="header-section">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav" aria-label="Main navigation">
+              <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="/" aria-label="Homepage">
+                  <img src="/assets/logo/logo.svg" alt="Company Logo" width="180" height="45" class="img-fluid">
+                </a>
+          
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <!-- Navigation Items -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                  <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about-us">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/alumni-directory">Directory</a>
+                    </li>
+          
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                      <button class="nav-link dropdown-toggle bg-transparent border-0" 
+                              id="resourcesDropdown" data-bs-toggle="dropdown" 
+                              aria-expanded="false">
+                        Resources
+                      </button>
+                      <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="resourcesDropdown">
+                        <li><a class="dropdown-item py-2" href="/document-library">Document Library</a></li>
+                        <li><a class="dropdown-item py-2" href="/media-releases">Media Releases</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+          
+                <!-- Action Buttons -->
+                <div class="d-flex gap-2 align-items-center">
+                  <a class="btn btn-primary" href="https://www.g2o.co.za/" target="_blank" rel="noopener">
+                    Apply Now
+                  </a>
+                  <a class="btn btn-outline-primary" href="/register">
+                    Register
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </section>
+          
+        <main>
+<!-- Hero Carousel Section -->
+<section class="hero-section ">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Maths and Science slide"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Internship slide"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Global Scholars slide"></button>
+      </div>
+  
+      <!-- Carousel Items -->
+      <div class="carousel-inner d-flex align-items-center mt-4">
+        <!-- Slide 1 -->
+        <div class="carousel-item active ">
+          <div class="overlay"></div>
+          <img 
+            src="https://extranet.coega.co.za/images/2024/alumni/Slide1.png" 
+            class="d-block w-100" 
+            alt="Students learning mathematics and science"
+            width="1920" 
+            height="1080"
+            loading="eager">
+          <div class="carousel-caption d-flex align-items-center">
+            <div class="caption-content text-center">
+              <h1 class="display-2 fw-bold text-uppercase mb-4">Maths and Science</h1>
+              <p class="fs-4 mb-3">Empowering learners through excellence in mathematics and science education.</p>
+              <a href="/about-us" class="btn btn-custom-green btn-lg">
+                Learn More
+                <span class="visually-hidden">about our Maths and Science program</span>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="overlay"></div>
+          <img 
+            src="https://extranet.coega.co.za/images/2024/alumni/Slide2.png" 
+            class="d-block w-100" 
+            alt="Interns working in a professional environment"
+            width="1920" 
+            height="1080"
+            loading="lazy">
+          <div class="carousel-caption d-flex align-items-center">
+            <div class="caption-content text-center">
+              <h2 class="display-2 fw-bold text-uppercase mb-4">Internship</h2>
+              <p class="fs-4 mb-5">Providing experiential learning opportunities for graduates to kickstart their careers.</p>
+              <a href="/about-us" class="btn btn-custom-green btn-lg">
+                Learn More
+                <span class="visually-hidden">about our Internship program</span>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="overlay"></div>
+          <img 
+            src="https://extranet.coega.co.za/images/2024/alumni/Slide3.png" 
+            class="d-block w-100" 
+            alt="Global scholars in academic setting"
+            width="1920" 
+            height="1080"
+            loading="lazy">
+          <div class="carousel-caption d-flex align-items-center">
+            <div class="caption-content text-center">
+              <h2 class="display-2 fw-bold text-uppercase mb-4">Global Scholars</h2>
+              <p class="fs-4 mb-5">Empowering graduates for success in their professional journeys and contributions to society.</p>
+              <a href="/about-us" class="btn btn-custom-green btn-lg">
+                Learn More
+                <span class="visually-hidden">about our Global Scholars program</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous slide</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next slide</span>
+      </button>
+    </div>
+  </section>
+  
+<!-- About Section -->
+<section class="about-section bg-light py-5" id="about">
+    <div class="container px-4 py-5">
+        <div class="row gx-5 align-items-center">
+            <!-- Content Column -->
+            <div class="col-lg-6">
+                <h2 class="fw-bolder mb-4">COEGA DEVELOPMENT FOUNDATION</h2>
+                <p class="lead fw-normal text-muted mb-5">
+                    The Coega Development Foundation, formerly the Coega Skills Development Centre, tackles socio-economic challenges via skills development. Established by the Coega Development Corporation (CDC).
+                </p>
+
+                <!-- Features Grid -->
+                <div class="row g-4 mb-5">
+                    <!-- Vision Feature -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon bg-success rounded-circle mb-3">
+                                <i class="bi bi-brightness-alt-high fs-4"></i>
+                            </div>
+                            <h4 class="feature-title text-uppercase fw-bold">VISION</h4>
+                            <p class="text-muted">
+                                To become a people empowerment Centre of Excellence through education, skills development.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Values Feature -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon bg-warning rounded-circle mb-3">
+                                <i class="bi bi-people-fill fs-4"></i>
+                            </div>
+                            <h4 class="feature-title text-uppercase fw-bold">VALUES</h4>
+                            <p class="text-muted">
+                                Upholding integrity, dignity, transparency, accountability, transformation, innovation, service Excellence
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="button-group">
+                    <a href="https://www.g2o.co.za/" class="btn btn-cta-primary me-3" target="_blank" rel="noopener">
+                        Career Portal
+                    </a>
+                    <a href="/about-us" class="btn btn-cta-secondary">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="col-lg-6">
+                <div class="about-image-wrapper">
+                    <img 
+                        src="https://extranet.coega.co.za/images/2024/alumni/about_image_home.png"
+                        alt="Coega Development Foundation showcase"
+                        class="img-fluid rounded shadow"
+                        width="600"
+                        height="400"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Section -->
+<section class="programs-section py-5">
+    <div class="container px-4 py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder mb-3">OUR PROGRAMS</h2>
+            <p class="lead fw-normal text-muted">
+                Empowering lives through skill development.
+            </p>
+        </div>
+
+        <!-- Programs Grid -->
+        <div class="row g-4">
+            <!-- Internship Program -->
+            <div class="col-lg-4">
+                <a href="/about-us" class="program-card-link">
+                    <div class="program-card h-100">
+                        <div class="program-content">
+                            <h3 class="text-uppercase fw-bold mb-3">INTERNSHIP</h3>
+                            <p class="text-muted mb-0">
+                                The CDC's flagship Internship Program provides experiential learning for graduates, fulfilling practical requirements. A key part of CSR initiatives.
+                            </p>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Maths and Science Program -->
+            <div class="col-lg-4">
+                <a href="/about-us" class="program-card-link">
+                    <div class="program-card h-100">
+                        <div class="program-content">
+                            <h3 class="text-uppercase fw-bold mb-3">MATHS AND SCIENCE</h3>
+                            <p class="text-muted mb-0">
+                                The Coega Maths and Science Programme addresses high failure rates, offering a second chance for matric learners in Maths and Science.
+                            </p>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Global Scholars Program -->
+            <div class="col-lg-4">
+                <a href="/about-us" class="program-card-link">
+                    <div class="program-card h-100">
+                        <div class="program-content">
+                            <h3 class="text-uppercase fw-bold mb-3">GLOBAL SCHOLARS</h3>
+                            <p class="text-muted mb-0">
+                                The Coega Maths and Science Programme addresses high failure rates in Maths and Science, offering a second chance to matric learners with poor results.
+                            </p>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- cta -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="display-4 fw-bold mb-4 text-white">
+                    Learn Our Story
+                </h2>
+                <p class="lead mb-4 text-white">
+                    At the Coega Development Corporation, we believe in the transformative power of mathematics and science education.
+                </p>
+                <div class="d-flex gap-3">
+                    <a 
+                        class="btn btn-yellow px-4 py-3" 
+                        href="/about-us.html" 
+                        aria-label="Learn Our Story"
+                    >
+                        Learn Our Story
+                    </a>
+                    <a 
+                        class="btn btn-yellow-outline px-4 py-3" 
+                        href="/alumni_directory.html" 
+                        target="_blank" 
+                        aria-label="View Past Alumni"
+                    >
+                        Past Alumni <i class="bi bi-chevron-right" style="font-size: 1.2rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end cta -->
+            <!-- testimonials -->
+            <section>
+                <div class="testimonial py-5">
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5 justify-content-center">
+                            <!-- Testimonial 1 -->
+                            <div
+                                class="col-lg-4 mb-4 d-flex flex-column align-items-center">
+                                <div class="text-center mb-4 fst-italic">
+                                    "The Coega MSP educators have been so
+                                    motivating in ensuring that
+                                    we succeeded, thanks to Coega for such a
+                                    great initiative."
+                                </div>
+                                <div
+                                    class="d-flex align-items-center justify-content-center mt-auto">
+                                    <img
+                                        class="rounded-circle me-3 d-inline-block align-text-center"
+                                        src="assets/logo/logo.svg" alt="..."
+                                        style="width: 40px; height: 40px;" />
+                                    <div class="fw-bold">
+                                        Caylee Bezuidenhout
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div
+                                class="col-lg-4 mb-4 d-flex flex-column align-items-center">
+                                <div class="text-center mb-4 fst-italic">
+                                    "The Coega Maths and Science Programme
+                                    helped me structure my life and
+                                    my goals, and the teachers were dedicated to
+                                    ensuring that we succeeded."
+                                </div>
+                                <div
+                                    class="d-flex align-items-center justify-content-center mt-auto">
+                                    <img
+                                        class="rounded-circle me-3 rounded-circle me-3 d-inline-block align-text-center"
+                                        src="assets/logo/logo.svg" alt="..."
+                                        style="width: 40px; height: 40px;" />
+                                    <div class="fw-bold">
+                                        Sisipho Makwetu
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div
+                                class="col-lg-4 mb-4 d-flex flex-column align-items-center">
+                                <div class="text-center mb-4 fst-italic">
+                                    "This is life-changing for me, and now my
+                                    dreams are coming true. The
+                                    Programme gave an opportunity to become what
+                                    I want in life and assisted
+                                    me career-wise, and I am so grateful."
+                                </div>
+                                <div
+                                    class="d-flex align-items-center justify-content-center mt-auto">
+                                    <img
+                                        class="rounded-circle me-3 rounded-circle me-3 d-inline-block align-text-center"
+                                        src="assets/logo/logo.svg" alt="..."
+                                        style="width: 40px; height: 40px;" />
+                                    <div class="fw-bold">
+                                        Seth Johnson
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end testimonials -->
+            <!-- blog preview -->
+            <section>
+                <!-- Blog preview section-->
+                <section class="blog-preview py-5">
+                    <div class="container px-5 my-5">
+                        <!-- First Row -->
+                        <div class="row gx-5 justify-content-center mb-5">
+                            <!-- Left Column with Headline -->
+                            <div class="col-lg-6">
+                                <div class="text-start">
+                                    <h2 class="fw-bolder">Latest alumni
+                                        news</h2>
+                                </div>
+                            </div>
+                            <!-- Right Column with Short Paragraph -->
+                            <div class="col-lg-6">
+                                <p class="lead fw-normal text-muted mb-5">
+                                    Explore the latest achievements and stories
+                                    from our dynamic alumni community. Celebrate
+                                    the success and impact of our graduates in
+                                    various fields.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Second Row with Blog Posts -->
+                        <div class="row gx-5">
+                            <!-- Blog Post 1 -->
+                            <div class="col-lg mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top img-fluid"
+                                        src="https://extranet.coega.co.za/images/2024/alumni/blog_post_1.png"
+                                        alt="..."
+                                        style="max-width: 600px; max-height: 350px; object-fit: cover;" />
+                                    <div class="card-body p-4 card-body-custom">
+                                        <div
+                                            class="badge text-bg-success mb-2">Maths
+                                            and Science Programme</div>
+                                        <a
+                                            class="text-decoration-none link-dark stretched-link"
+                                            href="https://coega.co.za/site/media/media-releases/media-article?mediaId=2492"
+                                            target="_blank">
+                                            <h5
+                                                class="card-title mb-3">Coega
+                                                Honors 2023 Top Achievers in
+                                                Maths and Science Program</h5>
+                                        </a>
+                                        <p class="card-text mb-0"
+                                            id="blogDescription">
+                                            Coega celebrates 2023 MSP top
+                                            achievers with a second consecutive
+                                            100% pass rate. The ceremony honored
+                                            learners, facilitators, and
+                                            stakeholders, marking outstanding
+                                            results with distinctions and
+                                            improvements in Mathematics and
+                                            Physical Science...
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div
+                                            class="d-flex align-items-end justify-content-between">
+                                            <div
+                                                class="d-flex align-items-center">
+                                                <img
+                                                    class="rounded-circle me-3 d-inline-block align-text-center"
+                                                    src="assets/logo/logo.svg"
+                                                    alt="..."
+                                                    style="width: 40px; height: 40px;" />
+                                                <div class="small">
+                                                    <div class="fw-bold">Coega
+                                                        Development Corp.</div>
+                                                    <div
+                                                        class="text-muted">February
+                                                        9, 2024 &middot; 6 min
+                                                        read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blog Post 2 -->
+                            <div class="col-lg mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top img-fluid"
+                                        src="https://extranet.coega.co.za/images/2024/alumni/blog_post_2.png"
+                                        alt="..."
+                                        style="max-width: 600px; max-height: 350px; object-fit: cover;" />
+                                    <div class="card-body p-4 card-body-custom">
+                                        <div
+                                            class="badge text-bg-primary mb-2">Coega
+                                            Infrastructure Projects</div>
+                                        <a
+                                            class="text-decoration-none link-dark stretched-link"
+                                            href="https://coega.co.za/site/media/media-releases/media-article?mediaId=2492"
+                                            target="_blank">
+                                            <h5
+                                                class="card-title mb-3">Education
+                                                Minister Unveils Cutting-Edge
+                                                School in Mount Fletcher, Alfred
+                                                Nzo District</h5>
+                                        </a>
+                                        <p class="card-text mb-0"
+                                            id="blogDescription">
+                                            MEC unveils R126 million Zibi Meyer
+                                            JSS project, benefitting 396
+                                            learners with modern facilities
+                                            including classrooms, library, hall,
+                                            and sports field. Coega, a trusted
+                                            Implementing Agent, emphasizes
+                                            commitment to quality education,
+                                            creating 80 jobs for
+                                            local businesses ...
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div
+                                            class="d-flex align-items-end justify-content-between">
+                                            <div
+                                                class="d-flex align-items-center">
+                                                <img
+                                                    class="rounded-circle me-3 d-inline-block align-text-center"
+                                                    src="assets/logo/logo.svg"
+                                                    alt="..."
+                                                    style="width: 40px; height: 40px;" />
+                                                <div class="small">
+                                                    <div class="fw-bold">Coega
+                                                        Development Corp.</div>
+                                                    <div
+                                                        class="text-muted">February
+                                                        9, 2024 &middot; 6 min
+                                                        read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blog Post 3 -->
+                            <div class="col-lg mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top img-fluid"
+                                        src="https://extranet.coega.co.za/images/2024/alumni/blog_post_3.png"
+                                        alt="..."
+                                        style="max-height: 600px; object-fit: cover;" />
+                                    <div class="card-body p-4 card-body-custom">
+                                        <div
+                                            class="badge text-bg-primary mb-2">Coega
+                                            Infrastructure Projects</div>
+                                        <a
+                                            class="text-decoration-none link-dark stretched-link"
+                                            href="https://coega.co.za/site/media/media-releases/media-article?mediaId=2490"
+                                            target="_blank">
+                                            <h5 class="card-title mb-3">Coega
+                                                Partners with Education for
+                                                Nkululeko School Handover</h5>
+                                        </a>
+                                        <p class="card-text mb-0"
+                                            id="blogDescription">
+                                            Coega facilitates the opening of the
+                                            state-of-the-art Nkululeko School,
+                                            contributing to education and
+                                            community development in the Eastern
+                                            Cape. The project, valued at
+                                            millions, includes modern
+                                            facilities, classrooms, labs, and
+                                            ancillary services. The
+                                            initiative, part of Coega's role as
+                                            a Trusted Implementing ...
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                        <div
+                                            class="d-flex align-items-end justify-content-between">
+                                            <div
+                                                class="d-flex align-items-center">
+                                                <img
+                                                    class="rounded-circle me-3 d-inline-block align-text-center"
+                                                    src="assets/logo/logo.svg"
+                                                    alt="..."
+                                                    style="width: 40px; height: 40px;" />
+                                                <div class="small">
+                                                    <div class="fw-bold">Coega
+                                                        Development Corp.</div>
+                                                    <div
+                                                        class="text-muted">February
+                                                        9, 2024 &middot; 6 min
+                                                        read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!-- footer -->
+            <footer class="text-center text-lg-start bg-body-tertiary">
+                <!-- Section: Social media -->
+                <!-- Form -->
+                <form id="subscribeForm" method="post">
+                    <!-- Button trigger modal -->
+                    <section
+                        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom bg-body-secondary">
+                        <!-- Left -->
+                        <div class="me-5 d-none d-lg-block">
+                            <span style="margin-right: 10px;">Subscribe to our
+                                newsletter</span>
+                        </div>
+                        <!-- Left -->
+
+                        <!-- Right -->
+                        <div class="flex-grow-2">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <input required type="text" name="name"
+                                        class="form-control"
+                                        placeholder="Your name"
+                                        aria-label="Your name">
+                                </div>
+                                <div class="col-lg-3">
+                                    <input required type="email" name="email"
+                                        class="form-control"
+                                        placeholder="Your email"
+                                        aria-label="Your email">
+                                </div>
+                                <div class="col-lg-3">
+                                    <input type="tel" name="cell"
+                                        class="form-control"
+                                        placeholder="Your cell"
+                                        aria-label="Your cell">
+                                </div>
+                                <div class="col-lg-3">
+                                    <button type="submit"
+                                        class="btn btn-outline-primary w-100 custom-outline-button"
+                                        data-toggle="modal"
+                                        data-target="#successModal">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+                <!-- Section: Social media -->
+
+                <!-- Section: Links  -->
+                <section class="py-3">
+                    <div class="container text-center text-md-start">
+                        <!-- Grid row -->
+                        <div class="row mt-3">
+                            <!-- Grid column -->
+                            <div
+                                class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <!-- Content -->
+                                <h6 class="text-uppercase fw-bold mb-4 ps-3">
+                                    <img src="/assets/logo/logo.svg"
+                                        alt="Your Logo"
+                                        style="width: 100px; height: auto;">
+                                </h6>
+                                <p style="text-align: justify;">
+                                    The Coega Alumni is dedicated to fostering
+                                    connections among our esteemed alumni.<a
+                                        href="about-us.html" class="footer-link">
+                                        Read more</a></p>
+
+                                <!-- Section: Social media -->
+                                <section class="py-0">
+                                    <!-- Facebook -->
+                                    <a class="btn btn-outline btn-floating m-0"
+                                        href="https://www.facebook.com/CoegaDevCorp/"
+                                        target="_blank" role="button">
+                                        <i
+                                            class="bi bi-facebook footer-icon"></i>
+                                    </a>
+                                    <!-- Twitter -->
+                                    <a class="btn btn-outline btn-floating m-0"
+                                        href="https://twitter.com/coegadevcorp"
+                                        target="_blank" role="button">
+                                        <i
+                                            class="bi bi-twitter-x footer-icon"></i>
+                                    </a>
+                                    <!-- Youtube -->
+                                    <a class="btn btn-outline btn-floating m-0"
+                                        href="https://www.youtube.com/user/CoegaDevCorp/"
+                                        target="_blank" role="button">
+                                        <i
+                                            class="bi bi-youtube footer-icon"></i>
+                                    </a>
+                                    <!-- insta -->
+                                    <a class="btn btn-outline btn-floating m-0"
+                                        href="https://www.instagram.com/coegadevelopmentcorporation/"
+                                        target="_blank" role="button">
+                                        <i
+                                            class="bi bi-instagram footer-icon"></i>
+                                    </a>
+                                    <!-- LinkedIn -->
+                                    <a class="btn btn-outline btn-floating m-0"
+                                        href="https://www.linkedin.com/company/coega-development-corporation/"
+                                        target="_blank" role="button">
+                                        <i
+                                            class="bi bi-linkedin footer-icon"></i>
+                                    </a>
+                                </section>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column Links -->
+                            <div
+                                class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase">
+                                    Links
+                                </h6>
+                                <p>
+                                    <a href="index.html"
+                                        class="footer-link">Home</a>
+                                </p>
+                                <p>
+                                    <a href="about-us.html"
+                                        class="footer-link">About</a>
+                                </p>
+                                <p>
+                                    <a href="gallery.html"
+                                        class="footer-link">Gallery</a>
+                                </p>
+                                <p>
+                                    <a href="alumni_directory.html"
+                                        class="footer-link">Directory</a>
+                                </p>
+                                <p>
+                                    <a href="document_library.html"
+                                        class="footer-link">Document Library</a>
+                                </p>
+                                <p>
+                                    <a href="media_releases.html"
+                                        class="footer-link">Media Releases</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column  Quick links -->
+                            <div
+                                class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase">
+                                    Quick links
+                                </h6>
+                                <p>
+                                    <a href="https://coega.co.za/site/"
+                                        class="footer-link">Coega</a>
+                                </p>
+                                <p>
+                                    <a
+                                        href="https://coega.co.za/site/about-us/careers-and-training"
+                                        class="footer-link">Careers and
+                                        Training</a>
+                                </p>
+                                <p>
+                                    <a
+                                        href="https://extranet.coega.co.za/internsalumni/"
+                                        class="footer-link">Alumni extranet</a>
+                                </p>
+                                <p>
+                                    <a
+                                        href="https://coega.co.za/site/about-us/important-links"
+                                        class="footer-link">Important Links</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div
+                                class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase">
+                                    Legal & Compliance
+                                </h6>
+                                <p>
+                                    <a href="https://coega.co.za/site/terms"
+                                        class="footer-link">TERMS</a>
+                                </p>
+                                <p>
+                                    <a href="https://coega.co.za/site/site-map"
+                                        class="footer-link">SITE MAP</a>
+                                </p>
+                                <p>
+                                    <a href="https://coega.co.za/site/popi"
+                                        class="footer-link">POPI</a>
+                                </p>
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div
+                                class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3 text-start">
+                                <!-- Links -->
+                                <h6 class="text-uppercase">Contact</h6>
+                                <p class="mb-2" style="text-align: justify;">
+                                    Coega Development Corporation, Coega SEZ
+                                    Business Centre, Corner Alcyon Road &amp;
+                                    Zibuko Street, Zone 1, Coega SEZ, Gqeberha,
+                                    6100</p>
+                                <p>
+                                    <i class="fas fa-envelope me-0"></i>
+                                    info@coega.co.za
+                                </p>
+                                <container style="display: flex; justify-content: start;">
+                                    <section class="py-0 mx-2">
+                                        <!-- WhatsApp and TikTok icons -->
+                                        <a
+                                        href="https://whatsapp.com/channel/0029VaByIFZ2ER6cmQsiY63q"
+                                        target="_blank">
+                                        <i class="fa-brands fa-whatsapp footer-icon"></i>
+                                    </a>
+      
+                                      </section>
+                                      <section class="py-0">
+                                          <!-- WhatsApp and TikTok icons -->
+                                          <a
+                                          href="#"
+                                          target="_blank">
+                                          <i class="fa-brands fa-tiktok footer-icon"></i>
+                                      </a>
+                                        </section>
+      
+                                </container>
+
+                            </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="text-center p-2"
+                    style="background-color: rgba(0, 0, 0, 0.05);">
+                    Copyright © 2024
+                    <a class="footer-link"
+                        href="https://coega.co.za/site/">Coega Development
+                        Corporation (Pty) Ltd</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- end footer -->
+        </main>
+    </body>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</html>
